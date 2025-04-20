@@ -4,14 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buscador de películas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
     <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
     <script src="main.js" defer></script>
   </head>
   <body>
-    <h1>Buscador de peliculas</h1>
-    <form>
-      <input type="text" id="search" placeholder="Buscar película" />
-      <button type="submit">Buscar</button>
-    </form>
+    <div id="searchDiv" class="p-2 bg-primary-subtle">
+      <h1
+        class="bg-primary p-3 d-flex justify-content-center"
+        style="--bs-bg-opacity: 0.75"
+      >
+        Buscador de películas
+      </h1>
+      <div>
+        <h3 class="bg-primary-subtle p-3" style="--bs-bg-opacity: 0.75">
+          Busca tu película favorita
+        </h3>
+        <form id="dataForm" class="ms-3 mb-3">
+          <input type="text" id="search" placeholder="Buscar película" />
+          <button type="submit" class="btn btn-primary ms-2">Buscar</button>
+        </form>
+      </div>
+    </div>
+    <div
+      id="resultContainer"
+      class="container-fluid p-3 mb-2 bg-info-subtle text-info-emphasis d-flex gap-3 justify-content-center"
+    ></div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
